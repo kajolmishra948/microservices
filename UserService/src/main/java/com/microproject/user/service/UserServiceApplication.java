@@ -2,8 +2,11 @@ package com.microproject.user.service;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
+@EnableFeignClients // enable kar rahe hai feign client
+
 public class UserServiceApplication {
 
 	public static void main(String[] args) {

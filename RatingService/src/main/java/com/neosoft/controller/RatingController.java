@@ -45,6 +45,7 @@ public class RatingController {
 	@GetMapping("/users/{id}")
 	public ResponseEntity<List<Rating>> getRatingByUserId(@PathVariable("id") String userId) {
 		List<Rating> ratings = ratingService.getRatingByUserId(userId);
+//		System.out.println(ratings);
 		return ResponseEntity.status(HttpStatus.OK).body(ratings);
 	}
 	
@@ -52,6 +53,7 @@ public class RatingController {
 	@GetMapping("/hotels/{id}")
 	public ResponseEntity<List<Rating>> getRatingByHotelId(@PathVariable("id") String hotelId) {
 		List<Rating> ratings = ratingService.getRatingByHotelId(hotelId);
+
 		return ResponseEntity.status(HttpStatus.OK).body(ratings);
 	}
 	
